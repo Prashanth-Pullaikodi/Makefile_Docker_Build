@@ -14,7 +14,7 @@ Simple Makefile to BUILD,PUSH,DEPLOY containers.
  make rm_single_container
  make rmi_docker_hub
 ```
-## Modify the predef-ined values accoring to your setup
+## Modify the pre-defined values according to your setup and push to your git account.
 
 ```bash                       
 RELEASE_VERSION := 3.0-patch                  #Modify if you would like to have release version for your imahe.
