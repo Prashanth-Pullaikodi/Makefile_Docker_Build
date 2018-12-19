@@ -6,7 +6,7 @@ pipeline {
 
             steps {
                 withEnv(["PATH=/usr/local/bin:$PATH"]){ 
-                             sh 'make build DOCKER_HUB_REPO="ppullaikodi"'
+                             sh 'make build'
                 }
             }
        }
@@ -15,7 +15,7 @@ pipeline {
 
             steps {
                  withEnv(["PATH=/usr/local/bin:$PATH"]){ 
-                            sh 'make push DOCKER_HUB_REPO="ppullaikodi"'
+                            sh 'make push'
                  }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
         stage ('Deployment Conatiner') {
             steps {
                 withEnv(["PATH=/usr/local/bin:$PATH"]){ 
-                            sh 'make deploy DOCKER_HUB_REPO="ppullaikodi"'
+                            sh 'make deploy'
                 }
           }
        }
