@@ -14,14 +14,18 @@ pipeline {
         stage ('Push Image') {
 
             steps {
+                 withEnv(["PATH=/usr/local/bin:$PATH"]){ 
                             ssh 'make push DOCKER_HUB_REPO="ppullaikodi"'
+                 }
             }
         }
 
 
         stage ('Deployment Conatiner') {
             steps {
+                withEnv(["PATH=/usr/local/bin:$PATH"]){ 
                             ssh 'make deploy DOCKER_HUB_REPO="ppullaikodi"'
+                }
           }
        }
     }
