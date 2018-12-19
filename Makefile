@@ -3,7 +3,7 @@
 
 DOCKER = docker
 AAP_NAME := nginx
-RELEASE_VERSION := 3.0-patch
+RELEASE_VERSION := 4.0-patch
 RELEASE_TAG := test-$(RELEASE_VERSION)
 DOCKER_HUB_REPO := ""
 USER_NAME = ""
