@@ -5,7 +5,9 @@ pipeline {
         stage ('Build Image') {
 
             steps {
+                withEnv(["PATH=/usr/local/bin:$PATH"]){ 
                              sh 'make build DOCKER_HUB_REPO="ppullaikodi"'
+                }
             }
        }
 
